@@ -1,0 +1,6 @@
+{
+	"dependencies": {
+		"@tailwindcss/postcss": "^4.1.17",
+		"tsconfig.dom.json": "link:@vue/tsconfig/tsconfig.dom.json"
+	}
+}
