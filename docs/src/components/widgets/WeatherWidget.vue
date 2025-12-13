@@ -16,7 +16,8 @@
 
 <script setup lang="ts">
 import { ref, onMounted, computed } from 'vue'
-import { WeatherService, WeatherData } from '@/services/weather.service'
+import { WeatherService } from '../../services/weather.service'
+import type { WeatherData } from '../../services/weather.service'
 
 const city = ref('Sint-Niklaas')
 

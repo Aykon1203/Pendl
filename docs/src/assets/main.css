@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ensure the app root fills the viewport so backgrounds cover the whole page */
+html, body, #app {
+	height: 100%;
+}
+
+/* Prevent grid items (widgets) from stretching to the height of the tallest item */
+.widget {
+	align-self: start;
+	/* Keep widgets visually consistent: match ClockWidget approximate height */
+	min-height: 12rem; /* ~192px — adjust if you want taller/shorter */
+}

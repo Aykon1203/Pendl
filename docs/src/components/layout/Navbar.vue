@@ -16,46 +16,9 @@
           <h1 class="text-xl font-bold whitespace-nowrap">My Dashboard</h1>
         </div>
 
-        <!-- Center: Search (grows to fill space) -->
-        <div class="hidden md:flex flex-1 justify-center max-w-2xl">
-          <div class="relative w-full">
-            <input
-              v-model="searchQuery"
-              type="text"
-              placeholder="Search widgets..."
-              :class="[
-                'w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-500',
-                store.darkMode 
-                  ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' 
-                  : 'bg-gray-50 border-gray-300 text-gray-800 placeholder-gray-500'
-              ]"
-            >
-          </div>
-        </div>
 
         <!-- Right: Actions (fixed width) -->
         <div class="flex items-center space-x-2 flex-shrink-0">
-          
-          <!-- Add Widget Button -->
-          <button
-            @click="showAddWidget = true"
-            :class="[
-              'flex items-center space-x-2 px-4 py-2 rounded-lg font-medium text-white transition-colors',
-              store.darkMode ? 'bg-blue-600 hover:bg-blue-700' : 'bg-blue-500 hover:bg-blue-600'
-            ]">
-            <span class="text-xl">+</span>
-            <span class="hidden sm:inline">Add Widget</span>
-          </button>
-
-          <!-- Search (mobile) -->
-          <button
-            @click="searchOpen = !searchOpen"
-            :class="[
-              'md:hidden p-2 rounded-lg transition-colors',
-              store.darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
-            ]">
-            🔍
-          </button>
 
           <!-- Dark Mode Toggle -->
           <button

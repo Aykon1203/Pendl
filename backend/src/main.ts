@@ -11,6 +11,11 @@ async function bootstrap() {
     credentials: true,
   });
 
-  await app.listen(3000);
+  const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
+  await app.listen(port);
+  // Informative log so it's clear which port is used
+  // (useful when the default 3000 is occupied)
+  // eslint-disable-next-line no-console
+  console.log(`Backend listening on http://localhost:${port}`);
 }
 bootstrap();

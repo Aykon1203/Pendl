@@ -1,9 +1,9 @@
 <template>
-  <div :class="store.darkMode ? 'bg-gray-700 text-white' : 'bg-white text-gray-800'"
-       class="p-6 rounded-xl shadow-lg transition-colors duration-200 h-full flex flex-col justify-center items-center">
+      <div :class="store.darkMode ? 'bg-gray-700 text-white' : 'bg-white text-gray-800'"
+        class="widget p-6 rounded-xl shadow-lg transition-colors duration-200 flex flex-col justify-center items-center">
 
     <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-2">
-      {{ store.darkMode ? 'Huidige Tijd' : 'Current Time' }}
+      {{ store.darkMode ? 'Huidige Tijd' : 'Huidige Tijd' }}
     </h3>
 
     <div class="text-6xl font-extrabold mb-1">
