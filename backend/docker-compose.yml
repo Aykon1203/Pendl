@@ -1,0 +1,26 @@
+# backend/docker-compose.yml
+version: '3.8'
+
+services:
+  backend:
+    container_name: dashboard_backend
+    # Gebruikt de Dockerfile in dezelfde map
+    build: 
+      context: . 
+    ports:
+      - "3000:3000"
+    # Volumes voor live herladen tijdens ontwikkeling
+
+    env_file:
+      - .env
+
+    volumes:
+      # Koppel de broncode voor hot-reload
+      - ./src:/app/src 
+      # Exclusief de node_modules in de container
+      - /app/node_modules 
+    
+    # Gebruik start:dev zoals gedefinieerd in NestJS package.json
+    command: pnpm run start:dev
+    
+    restart: always
