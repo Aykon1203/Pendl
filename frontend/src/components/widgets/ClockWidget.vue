@@ -1,5 +1,5 @@
 <template>
-      <div :class="store.darkMode ? 'bg-gray-700 text-white' : 'bg-white text-gray-800'"
+      <div :class="store.darkMode ? 'bg-gray-700 text-white' : 'bg-gray-700 text-white'"
         class="widget p-6 rounded-xl shadow-lg transition-colors duration-200 flex flex-col justify-center items-center">
 
     <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-2">

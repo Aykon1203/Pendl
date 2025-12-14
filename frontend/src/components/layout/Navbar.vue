@@ -19,17 +19,17 @@
         <!-- Right: Actions (fixed width) -->
         <div class="flex items-center space-x-2 flex-shrink-0">
 
-              <!-- Dark Mode Toggle -->
-              <button
-                @click="store.toggleDarkMode"
-                :class="[
-                  'p-2 rounded-lg transition-colors',
-                  store.darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
-                ]"
-                :title="store.darkMode ? 'Switch to light mode' : 'Switch to dark mode'">
-                <span v-if="store.darkMode">☀️</span>
-                <span v-else>🌙</span>
-              </button>
+          <!-- Dark Mode Toggle -->
+          <button
+            @click="store.toggleDarkMode"
+            :class="[
+              'p-2 rounded-lg transition-colors',
+              store.darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
+            ]"
+            :title="store.darkMode ? 'Switch to light mode' : 'Switch to dark mode'">
+            <span v-if="store.darkMode">☀️</span>
+            <span v-else>🌙</span>
+          </button>
         </div>
       </div>
 
@@ -49,7 +49,6 @@
       </div>
     </div>
   </nav>
-
 </template>
 
 <style scoped>
@@ -74,4 +73,5 @@ const store = useDashboardStore()
 const searchQuery = ref('')
 const searchOpen = ref(false)
 const showAddWidget = ref(false)
+const showSettings = ref(false)
 </script>
