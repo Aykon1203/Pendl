@@ -2,7 +2,7 @@
 <template>
   <nav 
     :class="store.darkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'" 
-    class="shadow-md transition-colors duration-200">
+    class="navbar shadow-md transition-colors duration-200">
     <div class="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 gap-4">
         
@@ -19,17 +19,17 @@
         <!-- Right: Actions (fixed width) -->
         <div class="flex items-center space-x-2 flex-shrink-0">
 
-          <!-- Dark Mode Toggle -->
-          <button
-            @click="store.toggleDarkMode"
-            :class="[
-              'p-2 rounded-lg transition-colors',
-              store.darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
-            ]"
-            :title="store.darkMode ? 'Switch to light mode' : 'Switch to dark mode'">
-            <span v-if="store.darkMode">☀️</span>
-            <span v-else>🌙</span>
-          </button>
+              <!-- Dark Mode Toggle -->
+              <button
+                @click="store.toggleDarkMode"
+                :class="[
+                  'p-2 rounded-lg transition-colors',
+                  store.darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
+                ]"
+                :title="store.darkMode ? 'Switch to light mode' : 'Switch to dark mode'">
+                <span v-if="store.darkMode">☀️</span>
+                <span v-else>🌙</span>
+              </button>
         </div>
       </div>
 
@@ -49,12 +49,19 @@
       </div>
     </div>
   </nav>
+
 </template>
 
 <style scoped>
 .navbar {
+  /* Respect device safe area (notch) on top and sides so buttons are reachable */
+  padding-top: constant(safe-area-inset-top);
   padding-top: env(safe-area-inset-top);
-  /* rest van je navbar styles */
+  padding-left: constant(safe-area-inset-left);
+  padding-left: env(safe-area-inset-left);
+  padding-right: constant(safe-area-inset-right);
+  padding-right: env(safe-area-inset-right);
+  box-sizing: border-box;
 }
 </style>
 
@@ -67,5 +74,4 @@ const store = useDashboardStore()
 const searchQuery = ref('')
 const searchOpen = ref(false)
 const showAddWidget = ref(false)
-const showSettings = ref(false)
 </script>

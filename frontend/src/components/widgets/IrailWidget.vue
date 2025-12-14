@@ -35,7 +35,7 @@
           <span v-if="hasDelay(d)" class="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-red-600 text-white">
             +{{ Math.max(0, Math.round((d.delay ?? 0) / 60)) }}m
           </span>
-          <span v-else class="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-green-600 text-white">On time</span>
+          <span v-else class="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-green-600 text-white">Op tijd</span>
         </div>
       </li>
     </ul>

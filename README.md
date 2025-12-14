@@ -1,40 +1,72 @@
-# Widget Dashboard
+# Pendl
 
-This repository contains a small dashboard application with a Vue frontend and a NestJS backend that fetches weather data from the OpenWeather API.
+A mobile commuter app for Belgian train travelers, featuring a clock widget and real-time NMBS/SNCB train information.
 
-## Setup
+## Features
 
-1. Backend
+- **Clock Widget**: Always know the current time
+- **iRail Widget**: Real-time train departures and delays from NMBS/SNCB stations
+- Built with Vue.js and Capacitor for native Android performance
 
-   - Copy the example env file and add your API key locally (do NOT commit the real `.env`):
+## Building the App
 
-     ```bash
-     cd backend
-     cp .env.example .env
-     # edit .env and set OPENWEATHER_API_KEY
-     ```
+### Prerequisites
 
-   - Install and run the backend:
+- Node.js and pnpm
+- Android Studio (for building APK)
 
-     ```bash
-     pnpm install
-     pnpm start:dev
-     ```
+### Setup
 
-   The backend listens on port `3000` by default and the frontend dev server (Vite) is configured to call it on `http://localhost:3000`.
-
-2. Frontend
-
-   ```bash
-   cd frontend
+1. **Install dependencies**
+```bash
    pnpm install
-   pnpm dev
-   ```
+```
 
-## Security note
+2. **Build the web app**
+```bash
+   pnpm run build
+```
 
-Never commit secrets (API keys, passwords) to the repository. Use `.env` for local development and ensure `.gitignore` contains the `.env` entry. If a secret accidentally got pushed to the remote, rotate/regenerate the secret immediately.
+3. **Add Android platform** (first time only)
+```bash
+   pnpm add @capacitor/core @capacitor/cli @capacitor/android @capacitor/status-bar
+   pnpm exec cap add android
+```
 
-## Restoring deleted files
+4. **Sync to Android**
+```bash
+   pnpm exec cap sync android
+```
 
-If you accidentally reverted or removed files, this repository contains a recovery commit which attempted to restore the missing backend and frontend files. If anything else is missing, open an issue or contact the maintainer.
+5. **Open in Android Studio**
+```bash
+   pnpm exec cap open android
+```
+
+6. **Build APK**
+
+   In Android Studio:
+   - Build → Build Bundle(s) / APK(s) → Build APK(s)
+   - APK will be in `android/app/build/outputs/apk/debug/app-debug.apk`
+
+## Making Changes
+
+After editing code:
+```bash
+pnpm run build
+pnpm exec cap sync android
+```
+
+Then rebuild the APK in Android Studio.
+
+## Data Source
+
+Train data is provided by [iRail](https://irail.be/), a free and open-source API for Belgian railway information.
+
+## Note
+
+This is a mobile-only application designed for Android devices. There is no backend server - all data is fetched directly from public APIs.
+
+Because this project is a Capacitor Android app, a `.env` file is not required. If you do use API keys during local development, keep them in a local, untracked `.env` file and never commit it.
+
+Note: You can change the default "from" and "to" destinations in `frontend/src/components/widgets/IrailWidget.vue` at lines 49 and 50.

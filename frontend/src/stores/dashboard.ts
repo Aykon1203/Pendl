@@ -19,6 +19,7 @@ export const useDashboardStore = defineStore('dashboard', () => {
   function removeWidget(id: string) {
     widgets.value = widgets.value.filter((w: any) => w.id !== id)
   }
+
   
   // Load from localStorage on init
   const savedMode = localStorage.getItem('darkMode')
