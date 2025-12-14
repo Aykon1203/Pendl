@@ -7,14 +7,17 @@
     "node": "^20.19.0 || >=22.12.0"
   },
   "scripts": {
-    "dev": "pnpm run generate:quotes && vite",
+    "dev": "vite",
     "generate:quotes": "node ./scripts/generate-motivation-quotes.cjs",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "build": "vite build",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build"
   },
   "dependencies": {
+    "@capacitor/android": "^8.0.0",
+    "@capacitor/cli": "^8.0.0",
+    "@capacitor/core": "^8.0.0",
     "axios": "^1.13.2",
     "irail-api": "^0.6.3",
     "motivation": "^1.0.3",
