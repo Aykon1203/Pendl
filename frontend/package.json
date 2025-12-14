@@ -18,6 +18,7 @@
     "@capacitor/android": "^8.0.0",
     "@capacitor/cli": "^8.0.0",
     "@capacitor/core": "^8.0.0",
+    "@capacitor/status-bar": "^8.0.0",
     "axios": "^1.13.2",
     "irail-api": "^0.6.3",
     "motivation": "^1.0.3",

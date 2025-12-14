@@ -16,7 +16,7 @@
     <div v-else-if="error" class="p-4 text-sm text-red-400">Fout: {{ error }}</div>
 
     <ul v-else class="divide-y divide-gray-700">
-      <li v-for="(d, i) in connections.slice(0,6)" :key="i" class="flex items-center px-4 py-4">
+      <li v-for="(d, i) in connections.slice(0,5)" :key="i" class="flex items-center px-4 py-4">
         <!-- Left: large time -->
         <div class="w-28 text-left">
           <div class="text-4xl font-extrabold leading-none">{{ formatTime(d.time) }}</div>

@@ -9,11 +9,10 @@
         <!-- Left: Logo (fixed width) -->
         <div class="flex items-center space-x-2 flex-shrink-0">
           <div 
-            :class="store.darkMode ? 'bg-blue-500' : 'bg-blue-600'" 
             class="w-8 h-8 rounded-lg flex items-center justify-center">
-            <span class="text-white font-bold text-lg">D</span>
+            <img src="../../../imgs/PENDL.png" alt="PENDL">
           </div>
-          <h1 class="text-xl font-bold whitespace-nowrap">My Dashboard</h1>
+          <h1 class="text-xl font-bold whitespace-nowrap">Pendl</h1>
         </div>
 
 
@@ -51,6 +50,13 @@
     </div>
   </nav>
 </template>
+
+<style scoped>
+.navbar {
+  padding-top: env(safe-area-inset-top);
+  /* rest van je navbar styles */
+}
+</style>
 
 <script setup>
 import { ref } from 'vue'

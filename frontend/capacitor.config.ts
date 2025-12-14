@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.aykon.widgetdashboard',
-  appName: 'Widget Dashboard',
+  appId: 'com.aykon.pendl',
+  appName: 'Pendl',
   webDir: 'dist'
 };
 

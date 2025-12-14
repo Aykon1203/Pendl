@@ -1,4 +1,4 @@
-package com.aykon.widgetdashboard;
+package com.aykon.pendl;
 
 import com.getcapacitor.BridgeActivity;
 
