@@ -24,6 +24,7 @@ A mobile commuter app for Belgian train travelers, featuring a clock widget and 
 
 2. **Build the web app**
 ```bash
+   cd frontend
    pnpm run build
 ```
 
