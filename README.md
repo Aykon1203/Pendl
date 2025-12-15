@@ -69,4 +69,8 @@ This is a mobile-only application designed for Android devices. There is no back
 
 Because this project is a Capacitor Android app, a `.env` file is not required. If you do use API keys during local development, keep them in a local, untracked `.env` file and never commit it.
 
-Note: You can change the default "from" and "to" destinations in `frontend/src/components/widgets/IrailWidget.vue` at lines 49 and 50.
+Note: You can change the default "from" and "to" destinations in `frontend/src/components/widgets/IrailWidget.vue` by changing these variables:
+```bash
+const fromA = 'Sint-Niklaas'
+const toA = 'Gent-Sint-Pieters'
+```

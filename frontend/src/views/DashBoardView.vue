@@ -6,7 +6,6 @@
       <div class="grid items-start grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <ClockWidget />
         <IrailWidget />
-        <CrowdingWidget/>
       </div>
     </div>
   </div>
@@ -15,7 +14,6 @@
 <script setup lang="ts">
 import ClockWidget from '../components/widgets/ClockWidget.vue';
 import IrailWidget from '@/components/widgets/IrailWidget.vue';
-import CrowdingWidget from '@/components/widgets/CrowdingWidget.vue';
 import { useDashboardStore } from '../stores/dashboard';
 
 const store = useDashboardStore()

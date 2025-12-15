@@ -15,6 +15,7 @@ export type IrailDeparture = {
   direction?: string
   delay?: number
   platform?: string
+  crowding?: string
 }
 
 export const IrailService = {
@@ -31,6 +32,8 @@ export const IrailService = {
       direction: d.direction,
       delay: d.delay ? Number(d.delay) : 0,
       platform: d.platform,
+      // carry through any crowding/occupancy field if present in response
+      crowding: d.crowding ?? d.occupancy ?? d.crowd ?? d.occupancy_level,
     }))
   },
 
