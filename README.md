@@ -19,12 +19,12 @@ A mobile commuter app for Belgian train travelers, featuring a clock widget and 
 
 1. **Install dependencies**
 ```bash
+   cd frontend
    pnpm install
 ```
 
 2. **Build the web app**
 ```bash
-   cd frontend
    pnpm run build
 ```
 
