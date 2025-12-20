@@ -25,7 +25,6 @@
 
         <!-- Middle: direction + vehicle (flexible) -->
         <div class="flex-1 px-4">
-          <div class="text-sm text-gray-300">{{ d.vehicle ?? '' }}</div>
           <div class="text-lg font-semibold">{{ d.direction }}</div>
           <div class="text-sm text-gray-400 mt-1">Spoor: <span class="font-medium text-white">{{ d.platform ?? '-' }}</span></div>
           <div v-if="d.arrivalTime" class="text-sm text-gray-400 mt-1">Aankomst: <span class="font-medium text-white">{{ formatTime(d.arrivalTime) }}</span></div>
